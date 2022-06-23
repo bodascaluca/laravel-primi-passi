@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    
+    <header>
+        <ul>
+            <li>
+                <a href="{{ route('home')}}">Home</a>
+            </li>
+            <li>
+               <a href="{{ route('about')}}">Chi siamo</a> 
+            </li>
+            <li>
+                <a href="{{ route('camere')}}">camere</a> 
+             </li>
+        </ul>
+    </header>  
 </body>
 </html>
 
-<header>
-    <ul>
-        <li>
-            <a href="{{ route('home')}}">Home</a>
-        </li>
-        <li>
-           <a href="{{ route('about')}}">Chi siamo</a> 
-        </li>
-    </ul>
-</header>
+
 
 <h1>ciao sono {{ $name }} {{ $lastname}}, una pagina home</h1>
 {{-- 
