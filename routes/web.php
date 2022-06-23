@@ -31,14 +31,14 @@ Route::get('/', function () { // è una classe definita di laravel
                 'name' => 'Francesco',
                 'lastname' => 'Armandi'
             ],
-           'anotherArray' => [
-
-           ], 
         ],
+        'anotherArray' => [
+
+        ], 
     ];
     return view('home', $data);
-});
+})->name('home');
 
 Route::get('/chi-siamo', function(){// ciò che deve essere messo in url 
     return view ('about');
-}); 
+})->name('about') ;
