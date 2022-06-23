@@ -13,6 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () { // è una classe definita di laravel 
+    $data = [
+        'name' => 'Olga',
+        'lastname' => 'Demina',
+        'isLogginIn' => true,
+        'students' => [
+            [  
+                'name' => 'Luca',
+                'lastname' => 'Bodasca'
+            ],
+            [
+                'name' => 'Fabrizio',
+                'lastname' => 'Bocca'
+            ],
+            [
+                'name' => 'Francesco',
+                'lastname' => 'Armandi'
+            ],
+           'anotherArray' => [
+
+           ], 
+        ],
+    ];
+    return view('home', $data);
 });
+
+Route::get('/chi-siamo', function(){// ciò che deve essere messo in url 
+    return view ('about');
+}); 
